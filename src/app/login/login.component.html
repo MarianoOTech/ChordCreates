@@ -1,10 +1,33 @@
-<div>login into miselania</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ChordCreate</title>
 
-
-<div><a routerLink="/"><button>closes</button></a></div>
-<div>email <input type="email"></div>
-<div>password<input type="password"></div>
-<div>forgot password</div>
-<div><button>login</button></div>
-<div><a routerLink="/new-user"><button>new user</button></a></div>
-<div><a routerLink="/forgot-password"><button>forgot password</button></a></div>
+</head>
+<body>
+    <div class="login-container">
+        <div class="VentanaLogin">
+            <form>
+                <h1>Log in</h1>
+                <div class="input-box">
+                    <input type="email" name="email" [(ngModel)]="email" placeholder="Correo Electronico" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password"[(ngModel)]="password" placeholder="Contraseña" required> 
+                </div>
+                <div class="contra">
+                    <a class="olvidastecontraseña" routerLink="/forgot-password">Olvidaste tu Contraseña?</a>
+                </div>
+                <!--<a class="" routerLink="/home">-->
+                    <button (click)='callLogin()'> > </button>
+                <!--</a>-->
+                <div class="registrarte-link">
+                    <p>Don't have an account? <a routerLink="/new-user">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+        <link rel="stylesheet" href="login.component.css">
+    </div>
+</body>
+</html>

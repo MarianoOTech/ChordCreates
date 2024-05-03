@@ -1,9 +1,32 @@
-<div>
-<div class = "title">Sign up for <b>Miselania</b></div>
-<div>email <input type="email"></div>
-<div>name <input type="text"></div>
-<div>last name <input type="text"></div>
-<div>password <input type="password"></div> 
-<div><input type="checkbox"> I accept the <a routerLink="/terms-and-conditions">terms and conditions</a></div>
-<div><a routerLink="/login"><button>Continue</button></a></div>
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ChordCreate</title>
+
+</head>
+<body>
+    <div class="VentanaSignUp">
+        <form>
+            <h1>Sign up</h1>
+            <div class="input-box">
+                <input type="text" [(ngModel)]="myPayloadUser.Name" name="name" placeholder="Nombre" required>
+            </div>
+            <div class="input-box">
+                <input type="email" [(ngModel)]="myPayloadUser.email" name="email" placeholder="Correo Electronico" required>
+            </div>
+            <div class="input-box">
+                <input type="password" [(ngModel)]="myPayloadUser.password" name="password" placeholder="Contraseña" required> 
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Confirmar contraseña" required> 
+            </div>
+            <button (click)='crearUser()'> > </button>
+            <div class="registrarte-link">
+                <p>Already have an account? <a routerLink="/login">Log In</a></p>
+            </div>
+        </form>
+    </div>
+    <link rel="stylesheet" href="new-user.component.css">
+</body>
+</html>

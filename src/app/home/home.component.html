@@ -1,1 +1,67 @@
-<p>home works!</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ChordCreate</title>
+
+</head>
+<body>
+    <div class="VentanaSignUp">
+        <h1>Melodia</h1>
+        <label>Notas:</label>
+        <label>Escala: </label>
+        <label>Instrumento:</label>
+            <select class="casilla" [(ngModel)]="notaSeleccionada">
+                <option value="C">C</option>
+                <option value="C#">C#</option>
+                <option value="D">D</option>
+                <option value="D#">D#</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="F#">F#</option>
+                <option value="G">G</option>
+                <option value="G#">G#</option>
+                <option value="A">A</option>
+                <option value="A#">A#</option>
+                <option value="B">B</option>
+            </select>
+        <select class="casilla" [(ngModel)]="escalaSeleccionada">
+            <option value="Menor">Minor</option>
+            <option value="Mayor">Major</option>
+        </select>
+        <select class="casilla"[(ngModel)]="instrumentoSeleccionado">
+            <option value="Piano">Piano</option>
+            <option value="Guitarra">Gitarra</option>
+        </select>
+        <div class="descripcion">
+            <p>Escoge un tipo de
+                progresión que se ajuste a
+                lo que deseas tocar y
+                selecciona una tonalidad
+                cómoda para ti.
+            </p>
+        </div>
+        <button (click)="guardarMelodia()"> > </button>
+    </div>
+    <div class="VentanaPro">
+        <h2>Progresion</h2>
+        <div class="VerNotas">
+            <a *ngFor="let nota of notasGeneradas" (click)="mostrarImagen(nota)">{{ nota }}</a>
+        </div>
+        <div class="imagenBox">
+                <img [src]="imagenSeleccionada">
+        </div>
+        
+    </div>
+    <div class="VentanaExtra">
+        <h2>Acordes en tonalidad</h2>
+        <div class="notasContainer">
+            <a *ngFor="let nota of notasEscalas" (click)="mostrarImagenNota(nota)">{{ nota }}</a>
+        </div>
+        <div class="imagenBox">
+            <img [src]="verimagenSeleccionada">
+        </div>
+    </div>
+    <link rel="stylesheet" href="home.component.css">
+</body>
+</html>

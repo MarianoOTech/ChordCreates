@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Teko:wght@300..700&family=Workbench:SCAN@-44&display=swap');
+section{
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 2%;
+    
+ }
+ 
+section a{
+   color: #2e2e2e;
+   font-size: 30px;
+   gap: 50px;
+   text-decoration: none;
+ }
+ 
+section nav a {
+    border: solid;
+    border-color: #ececec;
+    color: #2e2e2e;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px;
+    margin-right: 15px;
+ }
+ 
+section nav a:hover {
+    border: solid;
+    border-radius: 6px;
+ }
+
+option:hover {
+   background-color: rgba(0, 0, 0, 0.1); 
+}

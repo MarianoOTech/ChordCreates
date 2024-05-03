@@ -1,0 +1,102 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    min-height: 85vh;
+    font-family: 'Inconsolata';
+    color: #ececec;
+    background : #ececec;
+}
+
+.VentanaContraseña{
+    width: 750px;
+    background-color: #2e2e2e;
+    border: solid;
+    border-right: solid 5px;
+    border-bottom: solid 8px;
+    border-radius: 30px;
+
+}
+
+.VentanaContraseña h1{
+    font-size: 30px;
+    background:#ececec;
+    color: #2e2e2e;;
+    border-radius: 15px;
+    margin-left: 20px;
+    padding-left: 15px;
+    margin-right: 420px;
+}
+
+.VentanaContraseña p{
+        font-size: 22px;
+        display: flex;
+        padding-bottom: 40px;
+        padding-right: 270px;
+        padding-left: 25px;
+}
+
+.VentanaContraseña .input-box{
+    width: 50%;
+    height: 45px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.input-box input{
+    width: 88%;
+    height: 75%;
+    margin: 5px 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: solid;
+    border-color:#ececec;
+    font-size: 16px;
+    padding: 6px 0 0 6px;
+    color: #ececec;
+    font-family: 'Inconsolata';
+}
+.input-box input::placeholder{
+    color: #ececec;
+}
+
+.contra{
+    margin-bottom: 60px;
+}
+
+.olvidastecontraseña:hover{
+    text-decoration: underline;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    margin-left: 310px;
+    padding-left: 9px;
+    font-size: 40px;
+    color: #ececec;
+    background: transparent;
+    border: solid #ececec;
+    border-radius: 50px;
+}
+
+button:hover{
+    color: #7ED957;
+    background: transparent;
+    border: solid #7ED957;
+}
+
+.registrarte-link{
+    text-align: center;
+}
+
+.registrarte-link a{
+    color: #7ED957;
+    text-decoration: none;
+    padding: 10px;
+}
+.registrarte-link a:hover{
+    color: #7ED957;
+    text-decoration: underline;
+}
