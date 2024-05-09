@@ -4,7 +4,6 @@ import { Acordes } from '../models/melodias/Acordes';
 import { Melodia } from '../models/melodias/Melodia';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; // Importa CommonModule
-
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -63,5 +62,18 @@ export class HomeComponent {
     console.log("Enlace de la imagen:", urlImagen);
     this.verimagenSeleccionada = urlImagen;
   }
-}
 
+  activarSonido(notaSeleccionada: string){
+    var miMelodia = new Acordes();
+    miMelodia.instrumento = this.instrumentoSeleccionado
+    console.log("Nota seleccionada:", notaSeleccionada);
+    
+    const urlSound = this.melodiaServices.obtenerSonido(miMelodia.instrumento, notaSeleccionada);
+    if (urlSound) {
+      const audio = new Audio(urlSound);
+      audio.play();
+      console.log(audio)
+    }
+
+  }
+}

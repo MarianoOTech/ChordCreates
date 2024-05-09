@@ -1,5 +1,6 @@
 
 import { Injectable } from '@angular/core';
+
 import { Acordes } from '../app/models/melodias/Acordes';
 import { Melodia } from '../app/models/melodias/Melodia';
 
@@ -91,6 +92,38 @@ export class MelodiasService {
     // Puedes agregar más instrumentos aquí si es necesario
   };
   
+  SonidoNotas:{ [instrumento: string]: { [nota:string]: string } }= {
+    'Piano': {
+        'C': '../../assets/audio/Piano/C_Piano.mp3',
+        'C#': '../assets/audio/Piano/Cs_Piano.mp3',
+        'D': '../assets/audio/Piano/D_Piano.mp3',
+        'D#': '../assets/audio/Piano/Ds_Piano.mp3',
+        'E': '../assets/audio/Piano/E_Piano.mp3',
+        'F': '../assets/audio/Piano/F_Piano.mp3',
+        'F#': '../assets/audio/Piano/Fs_Piano.mp3',
+        'G': '../assets/audio/Piano/G_Piano.mp3',
+        'G#': '../assets/audio/Piano/Gs_Piano.mp3',
+        'A': '../assets/audio/Piano/A_Piano.mp3',
+        'A#': '../assets/audio/Piano/As_Piano.mp3',
+        'B': '../assets/audio/Piano/B_Piano.mp3',
+    },
+    'Guitarra': {
+      'C': '../../assets/audio/Guitar/C_guitar.mp3',
+      'C#': '../../assets/audio/Guitar/Cs_guitar.mp3',
+      'D': '../../assets/audio/Guitar/D_guitar.mp3',
+      'D#': '../../assets/audio/Guitar/Ds_guitar.mp3',
+      'E': '../../assets/audio/Guitar/E_guitar.mp3',
+      'F': '../../assets/audio/Guitar/F_guitar.mp3',
+      'F#': '../../assets/audio/Guitar/Fs_guitar.mp3',
+      'G': '../../assets/audio/Guitar/G_guitar.mp3',
+      'G#':'../../assets/audio/Guitar/Gs_guitar.mp3',
+      'A': '../../assets/audio/Guitar/A_guitar.mp3',
+      'A#': '../../assets/audio/Guitar/As_guitar.mp3',
+      'B': '../../assets/audio/Guitar/B_guitar.mp3',
+    }
+    // Puedes agregar más instrumentos aquí si es necesario
+  };
+
   generarNotas(nota: string, escala: string, cantidad: number): string[] {
     var notasDisponibles = this.notasPorEscala[nota][escala];
     var notasSeleccionadas: string[] = [];
@@ -118,6 +151,14 @@ export class MelodiasService {
   obtenerImagen(instrumento: string, nota: string): string {
     if (instrumento in this.instrumentosImagenes && nota in this.instrumentosImagenes[instrumento]) {
       return this.instrumentosImagenes[instrumento][nota];
+    } else {
+      return '';
+    }
+  }
+
+  obtenerSonido(instrumento: string, nota: string): string {
+    if (instrumento in this.SonidoNotas && nota in this.SonidoNotas[instrumento]) {
+      return this.SonidoNotas[instrumento][nota];
     } else {
       return '';
     }

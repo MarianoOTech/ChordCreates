@@ -31,7 +31,7 @@
         </select>
         <select class="casilla"[(ngModel)]="instrumentoSeleccionado">
             <option value="Piano">Piano</option>
-            <option value="Guitarra">Gitarra</option>
+            <option value="Guitarra">Guitarra</option>
         </select>
         <div class="descripcion">
             <p>Escoge un tipo de
@@ -46,7 +46,7 @@
     <div class="VentanaPro">
         <h2>Progresion</h2>
         <div class="VerNotas">
-            <a *ngFor="let nota of notasGeneradas" (click)="mostrarImagen(nota)">{{ nota }}</a>
+            <a *ngFor="let nota of notasGeneradas" (click)="mostrarImagen(nota); activarSonido(nota)">{{ nota }}</a>
         </div>
         <div class="imagenBox">
                 <img [src]="imagenSeleccionada">
@@ -56,7 +56,7 @@
     <div class="VentanaExtra">
         <h2>Acordes en tonalidad</h2>
         <div class="notasContainer">
-            <a *ngFor="let nota of notasEscalas" (click)="mostrarImagenNota(nota)">{{ nota }}</a>
+            <a *ngFor="let nota of notasEscalas" (click)="mostrarImagenNota(nota); activarSonido(nota)">{{ nota }}</a>
         </div>
         <div class="imagenBox">
             <img [src]="verimagenSeleccionada">
