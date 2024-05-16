@@ -74,6 +74,5 @@ export class HomeComponent {
       audio.play();
       console.log(audio)
     }
-
   }
 }

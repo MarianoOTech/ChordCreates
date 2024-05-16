@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 
 import { Acordes } from '../app/models/melodias/Acordes';
@@ -121,7 +120,6 @@ export class MelodiasService {
       'A#': '../../assets/audio/Guitar/As_guitar.mp3',
       'B': '../../assets/audio/Guitar/B_guitar.mp3',
     }
-    // Puedes agregar más instrumentos aquí si es necesario
   };
 
   generarNotas(nota: string, escala: string, cantidad: number): string[] {
