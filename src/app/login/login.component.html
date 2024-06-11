@@ -11,7 +11,7 @@
             <form>
                 <h1>Log in</h1>
                 <div class="input-box">
-                    <input type="email" name="email" [(ngModel)]="email" placeholder="Correo Electronico" required>
+                    <input type="username" name="username" [(ngModel)]="username" placeholder="Nombre de Usuario" required>
                 </div>
                 <div class="input-box">
                     <input type="password" name="password"[(ngModel)]="password" placeholder="Contraseña" required> 
@@ -21,6 +21,7 @@
                 </div>
                 <!--<a class="" routerLink="/home">-->
                     <button (click)='callLogin()'> > </button>
+                    {{myCredential.username}}
                 <!--</a>-->
                 <div class="registrarte-link">
                     <p>Don't have an account? <a routerLink="/new-user">Sign Up</a></p>

@@ -1,19 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Product } from '../app/models/products/Products';
+import { Product } from '../app/models/fake-product/Product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FakeProductService {
-  fakeProductsUrl: string = '/assets/data/product.json';
 
-  constructor(private http: HttpClient) { }
+  fake_products_url : string = '/assets/data/products.json';
 
-  getFakeProducts(): Observable<Product> {
+  constructor(private http: HttpClient) 
+  { }
 
-    return this.http.get<Product>(this.fakeProductsUrl);
+  getFake_Products(): Observable<Product>  {
+  
+    return this.http.get<Product>(this.fake_products_url);
+      
+  }
 
-}
 }
